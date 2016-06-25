@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -34,9 +36,10 @@ private static final String LOG_TAG = AndroidMoviesAdapter.class.getSimpleName()
             convertView = LayoutInflater.from(getContext())
                     .inflate(R.layout.movies_item,parent,false);
         }
-        //I must to change this for the text real about movies.
         ImageView imageView = (ImageView) convertView.findViewById(R.id.movies_image);
-        imageView.setImageResource(androidMovies.image);
+      //  imageView.setImageResource(androidMovies.image);
+        Picasso.with(getContext()).load(androidMovies.image).into(imageView);
+        //I must to change this for the text real about movies.
 
         TextView versionNameView = (TextView) convertView.findViewById(R.id.movies_text);
         versionNameView.setText(androidMovies.versionName);

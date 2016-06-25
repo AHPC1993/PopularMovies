@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.Arrays;
 
 /**
